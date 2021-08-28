@@ -3,7 +3,7 @@
 }
 
 #circle {
-  display: block;
+  display: inline-flex;
   position: relative;
   outline: none;
   border-radius: 270px;
@@ -11,7 +11,7 @@
   border: 0;
   font-size: 200px;
   font-weight: bold;
-  margin: 40px auto;
+  margin: 40px 0 0 20px;
   background-color: #ff0f39;
   color: whitesmoke;
   box-shadow: 0 20px #5cb228;
@@ -29,14 +29,14 @@
 }
 
 #rectangle {
+  z-index: 1;
   background-color: #ffc600;
   transform: scale(2);
-  display: inline-block;
+  display: inline-flex;
   width: 100px;
   height: 40px;
-  margin: 100px 200px 0 200px;
+  margin: 100px 200px 0 80px;
   padding: 35px 0 30px 0;
-  text-align: center;
   box-shadow: 0 18px #ff8c18;
   font-size: 80px;
   color: white;
@@ -53,10 +53,11 @@
 }
 
 #diamond {
+  z-index: index 2;
   background-color: #1e97fe;
   color: white;
   cursor: pointer;
-  display: inline-block;
+  display: inline-flex;
   position: relative;
   width: 142px;
   height: 142px;
@@ -82,10 +83,24 @@
 }
 
 #triangle {
-  display: inline-block;
+  display: inline-flex;
+
   width: 0;
   height: 0;
-  border-left: 100px solid transparent;
-  border-bottom: 100px solid teal;
-  border-right: 100px solid transparent;
+  font-size: 200px;
+  font-weight: bold;
+  margin: 100px 0 0 200px;
+  border-left: 90px solid transparent;
+  border-bottom: 180px solid #ff7a7e;
+  border-right: 130px solid transparent;
+}
+
+#triangle:hover {
+  cursor: pointer;
+  transform: skew(3deg,2deg);
+color: #720013;
+}
+
+#triangle:active {
+  transform: skew(-3deg, -2deg);
 }
