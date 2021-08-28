@@ -6,11 +6,9 @@ function App() {
   return (
     <div className="App">
       <button id="circle" >g</button>
-
-
-      <div id="rectangle">
-        a
-      </div>
+      <div id="rectangle">a</div>
+      <div id="diamond">i</div>
+      <div id="triangle">l</div>
     </div>
   );
 }

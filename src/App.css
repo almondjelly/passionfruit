@@ -51,3 +51,41 @@
 #rectangle:active {
   transform: scale(4, 2);
 }
+
+#diamond {
+  background-color: #1e97fe;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  width: 142px;
+  height: 142px;
+  font-size: 140px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0 0 50px 0;
+  margin: 10px 0 0 -150px;
+
+  border: 10px dashed rgb(255, 255, 255, .7);
+  transform-origin: bottom right;
+  transform: rotate(45deg);
+}
+
+#diamond:hover {
+  transform-origin: bottom right;
+  transform: rotate(75deg);
+}
+
+#diamond:active {
+  transform-origin: bottom right;
+  transform: rotate(105deg);
+}
+
+#triangle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-bottom: 100px solid teal;
+  border-right: 100px solid transparent;
+}
