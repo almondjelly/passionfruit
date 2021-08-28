@@ -5,7 +5,12 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <button id="circle">o</button>
+      <button id="circle" >g</button>
+
+
+      <div id="rectangle">
+        a
+      </div>
     </div>
   );
 }
