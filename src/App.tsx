@@ -26,7 +26,10 @@ function App() {
       <div id="shiver">
         gettin' jiggy
       </div>
-
+      <div id="wait">
+        wait for it...
+        <span id="spin"></span>
+      </div>
     </div>
   );
 }

@@ -168,7 +168,7 @@
 
 .dance {
   height: 100px;
-  width: 500px;
+  width: 300px;
   background-color: rgb(2, 71, 108);
   display: inline-block;
   margin: 100px 0 0 500px;
@@ -310,5 +310,34 @@
   }
   59% {
     transform: scale(1.1, 0.9) translate(0, -3px);
+  }
+}
+
+#wait {
+  font-size: 100px;
+  font-weight: bold;
+  margin-left: 600px;
+}
+#spin {
+  background-color: #fff000;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  border: 20px solid #ffb5d5;
+  border-top-color: #ff006f;
+  border-right-color: #ff4897;
+  border-bottom-color: #ff98c5;
+  border-radius: 50%;
+  animation: spin 3s 0s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(720deg);
   }
 }
