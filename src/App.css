@@ -1,106 +1,164 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 .app {
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 #circle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
   outline: none;
   border-radius: 270px;
-  padding: 10px 80px 30px 80px;
+  padding: 10px 120px 30px 80px;
+  margin: 150px 0 0 150px;
   border: 0;
-  font-size: 200px;
+  font-size: 180px;
   font-weight: bold;
-  margin: 40px 0 0 20px;
-  background-color: #ff0f39;
-  color: whitesmoke;
-  box-shadow: 0 20px #5cb228;
+  background-color: #e953da;
+  color: white;
+  -webkit-box-shadow: 0 20px #142f48;
+          box-shadow: 0 20px #142f48;
+  letter-spacing: -80px;
+  line-height: 190px;
   cursor: pointer;
+  transition-property: color;
+  transition-duration: 0.3s;
 }
-
 #circle:hover {
   top: 5px;
-  box-shadow: 0 15px #5cb228;
+  -webkit-box-shadow: 0 15px #142f48;
+          box-shadow: 0 15px #142f48;
+  color: black;
 }
-
 #circle:active {
-  top: 15px;
-  box-shadow: 0 5px #5cb228;
+  top: 10px;
+  -webkit-box-shadow: 0 10px #142f48;
+          box-shadow: 0 10px #142f48;
+  color: black;
 }
 
 #rectangle {
   z-index: 1;
-  background-color: #ffc600;
-  transform: scale(2);
+  background-color: #4c44cf;
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100px;
-  height: 40px;
-  margin: 100px 200px 0 80px;
-  padding: 35px 0 30px 0;
-  box-shadow: 0 18px #ff8c18;
-  font-size: 80px;
+  height: 0px;
+  padding: 50px 0 30px 10px;
+  margin: 0 0 0 120px;
+  -webkit-box-shadow: 0 20px #f5c1f0;
+          box-shadow: 0 20px #f5c1f0;
+  font-size: 100px;
+  line-height: 0;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition-duration: 0.5s;
+  transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-
 #rectangle:hover {
-  transform: scale(3, 2);
+  border-radius: 12px;
+  -webkit-transform: scale(2.5, 2);
+      -ms-transform: scale(2.5, 2);
+          transform: scale(2.5, 2);
+  color: black;
 }
-
 #rectangle:active {
-  transform: scale(4, 2);
+  border-radius: 24px;
+  -webkit-transform: scale(2.8, 2);
+      -ms-transform: scale(2.8, 2);
+          transform: scale(2.8, 2);
+  color: black;
 }
 
 #diamond {
   z-index: index 2;
-  background-color: #1e97fe;
+  background-color: #142f48;
   color: white;
   cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   position: relative;
-  width: 142px;
-  height: 142px;
-  font-size: 140px;
+  width: 170px;
+  height: 170px;
+  padding: 0 10px;
+  border-right: 10px dashed #f5c1f0;
+  -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: translate(-60px, 120px) rotate(45deg) skew(5deg, 5deg);
+      -ms-transform: translate(-60px, 120px) rotate(45deg) skew(5deg, 5deg);
+          transform: translate(-60px, 120px) rotate(45deg) skew(5deg, 5deg);
+  font-size: 200px;
   font-weight: bold;
   text-align: center;
-  padding: 0 0 50px 0;
-  margin: 10px 0 0 -150px;
-
-  border: 10px dashed rgb(255, 255, 255, .7);
-  transform-origin: bottom right;
-  transform: rotate(45deg);
+  transition-duration: 0.4s;
 }
-
+#i {
+  padding: 0 0 0 20px;
+  -webkit-transform: rotate(-45deg) skew(0deg);
+      -ms-transform: rotate(-45deg) skew(0deg);
+          transform: rotate(-45deg) skew(0deg);
+}
 #diamond:hover {
-  transform-origin: bottom right;
-  transform: rotate(75deg);
+  -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: translate(-60px, 120px) rotate(75deg);
+      -ms-transform: translate(-60px, 120px) rotate(75deg);
+          transform: translate(-60px, 120px) rotate(75deg);
+  color: black;
 }
-
 #diamond:active {
-  transform-origin: bottom right;
-  transform: rotate(105deg);
+  -webkit-transform-origin: bottom right;
+      -ms-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transform: translate(-60px, 120px) rotate(105deg);
+      -ms-transform: translate(-60px, 120px) rotate(105deg);
+          transform: translate(-60px, 120px) rotate(105deg);
 }
 
 #triangle {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-
   width: 0;
   height: 0;
-  font-size: 200px;
+  font-size: 220px;
   font-weight: bold;
-  margin: 100px 0 0 200px;
-  border-left: 90px solid transparent;
-  border-bottom: 180px solid #ff7a7e;
-  border-right: 130px solid transparent;
+  color: white;
+  margin: 0 0 0 80px;
+  border-left: 100px solid transparent;
+  border-bottom: 200px solid #1e8cb0;
+  border-right: 160px solid transparent;
+  -webkit-transform: translateY(110px);
+      -ms-transform: translateY(110px);
+          transform: translateY(110px);
+  transition-duration: 0.2s;
 }
-
 #triangle:hover {
   cursor: pointer;
-  transform: skew(3deg,2deg);
-color: #720013;
+  -webkit-transform: translateY(100px) skew(3deg,2deg);
+      -ms-transform: translateY(100px) skew(3deg,2deg);
+          transform: translateY(100px) skew(3deg,2deg);
+  color: black;
 }
-
 #triangle:active {
-  transform: skew(-3deg, -2deg);
+  -webkit-transform: translateY(90px) skew(-3deg, -2deg);
+      -ms-transform: translateY(90px) skew(-3deg, -2deg);
+          transform: translateY(90px) skew(-3deg, -2deg);
 }
