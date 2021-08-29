@@ -30,20 +30,23 @@
   letter-spacing: -80px;
   line-height: 190px;
   cursor: pointer;
-  transition-property: color;
-  transition-duration: 0.3s;
+  transform: scale(0.9);
+  transition-property: transform;
+  transition-duration: 0.5s;
 }
 #circle:hover {
   top: 5px;
   -webkit-box-shadow: 0 15px #142f48;
           box-shadow: 0 15px #142f48;
   color: black;
+  transform: scale(1);
 }
 #circle:active {
   top: 10px;
   -webkit-box-shadow: 0 10px #142f48;
           box-shadow: 0 10px #142f48;
   color: black;
+  transform: scale(1);
 }
 
 #rectangle {
@@ -161,4 +164,151 @@
   -webkit-transform: translateY(90px) skew(-3deg, -2deg);
       -ms-transform: translateY(90px) skew(-3deg, -2deg);
           transform: translateY(90px) skew(-3deg, -2deg);
+}
+
+.dance {
+  height: 100px;
+  width: 500px;
+  background-color: rgb(2, 71, 108);
+  display: inline-block;
+  margin: 100px 0 0 500px;
+  text-align: center;
+  transition: all 0.5s 0s linear;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 10px;
+  color: white;
+  padding: 40px 40px 66px 14px;
+}
+
+.dance:hover  {
+  background-color: rgb(162, 255, 0);
+  padding: 100px;
+  color: black;
+  letter-spacing: 50px;
+}
+
+.d {
+  display: inline-block;
+  animation: danceD 2s 0s linear infinite;
+}
+.d:hover {
+  animation-play-state: paused;
+}
+.a {
+  display: inline-block;
+  animation: danceA 1.5s 0.4s step-end infinite;
+}
+.n {
+  display: inline-block;
+  animation: danceN 1s 0.2s linear infinite;
+}
+.c {
+  display: inline-block;
+  animation: danceC 2.5s 0.6s ease-out infinite;
+}
+.e {
+  display: inline-block;
+  animation: danceE 2s 0.1s linear infinite;
+}
+
+@keyframes danceD {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes danceA {
+  0% {
+  }
+  50% {
+    transform: skew(10deg, -5deg);
+  }
+  75% {
+    transform: skew(-5deg, 16deg);
+  }
+  100% {
+  }
+}
+
+@keyframes danceN {
+  0% {
+    opacity: 1;
+    transform: translateY(-20%);
+}
+  50% {
+    opacity: 0.5;
+    transform: translateY(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-20%);
+  }
+}
+
+@keyframes danceC {
+  0% {
+    transform: rotate(270deg);
+  }
+  25% {
+    transform: rotate(50deg);
+    color: pink;
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes danceE {
+  0% {}
+  25% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateY(10px);
+  }
+  100% {}
+}
+
+#shiver {
+  width: 300px;
+  margin: 0 0 0 150px;
+  border-radius: 20px;
+  font-size: 50px;
+  font-weight: bold;
+  line-height: 40px;
+  padding: 50px 50px 0 20px;
+  background-color: #fff000;
+  transform: rotate(10deg);
+  animation: jiggle 2s 0s linear infinite;
+}
+#shiver:active {
+  animation-play-state: paused;
+}
+
+@keyframes jiggle {
+  48%, 59% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  51% {
+    transform: scale(0.9, 1.1) translate(0, -5px);
+  }
+  59% {
+    transform: scale(1.1, 0.9) translate(0, -3px);
+  }
 }
